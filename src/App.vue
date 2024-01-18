@@ -23,6 +23,7 @@ pool.subscribe(
 </script>
 <template>
   <h1>Nostr NIP-56 Board</h1>
+  <p>This site displays events recently reported to Japanese relays on Nostr.</p>
   <template v-if="getEventList().length === 0">
     <p>Loading...</p>
   </template>
@@ -46,7 +47,7 @@ pool.subscribe(
           }) }}</a>)</span>
       </div>
       <div class="div-report-container">
-        <h3>Report</h3>
+        <h3>Report<template v-if="e.reports.length > 1">s</template></h3>
         <div v-for="r in e.reports">
           <a target="_blank" :href="'https://njump.me/' + Nostr.nip19.npubEncode(r.pubkey)">
             <img class="div-report-avator"

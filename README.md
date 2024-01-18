@@ -1,3 +1,3 @@
-# Nostr Display Board
+# Nostr NIP-56 Board
 
-relay-jp.nostr.wirednet.jp リレーから取得したユーザーごとの最新の投稿を出す表示板です。
+Show kind:1984 reports from japanese relays.
